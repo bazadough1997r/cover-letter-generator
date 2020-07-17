@@ -1,0 +1,1 @@
+//welcome to JavaScript file where the functions will be declared and used/invoked on index.html
