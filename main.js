@@ -68,3 +68,38 @@ var myInfo = saveInputs(
     "Programming", ["Achievements-one", "Achievements-two", "Achievements-three"],
     "Seif Miehiar"
 );
+
+// now we want to create a function that would check our object and to take the values of it and update our cover letter.
+
+// and here you can see our cover letter already hard coded but we want to change some keywords.
+// var basicCoverLetter = `
+// Dear ${companyName},
+// I am writing in regard to your job opening of ${targetRole}. As a candidate with extensive experience in ${jobTitle}, I am highly skilled in ${hardSkills}.
+// The opportunity to join ${organizationName} greatly interests me because ${arrayOfReasons}. As a holder of ${degree} I can competently execute ${requirements}.
+// I believe that I would make a valuable asset to your team and I offer my resume for your review.
+// As per my professional summary, my qualities and experience make me highly suitable for the role of ${targetRole}.
+// I am highly regarded for ${arrayOfSoftSkills}. I am proficient in ${systems}.
+// Throughout my career, I have demonstrated the highest levels of service and commitment to the mission of any organization I have worked for.  ${arrayOfAchievements}.
+// Thus, if you are looking for a well grounded ${jobTitle} please contact me to arrange an interview. I am eager to learn more about how your organization can benefit from my contribution.
+// I thank you for your time and consideration, and I look forward to hearing from you.
+// Regards,
+// ${yourName}
+// #${yourName} #jobs #careers
+// `;
+
+//function accepts two parameters. object of our data, and the cover letter to update it's values.
+var updateCoverLetter = (dataObject) => {
+    return `Dear ${dataObject.companyName},
+  I am writing in regard to your job opening of ${dataObject.targetRole}. As a candidate with extensive experience in ${dataObject.jobTitle}, I am highly skilled in ${dataObject.hardSkills}.
+  The opportunity to join ${dataObject.organizationName} greatly interests me because ${dataObject.arrayOfReasons}. As a holder of ${dataObject.degree} I can competently execute ${dataObject.requirements}.
+  I believe that I would make a valuable asset to your team and I offer my resume for your review.
+  As per my professional summary, my qualities and experience make me highly suitable for the role of ${dataObject.targetRole}.
+  I am highly regarded for ${dataObject.arrayOfSoftSkills}. I am proficient in ${dataObject.systems}.
+  Throughout my career, I have demonstrated the highest levels of service and commitment to the mission of any organization I have worked for.  ${dataObject.arrayOfAchievements}.
+  Thus, if you are looking for a well grounded ${dataObject.jobTitle} please contact me to arrange an interview. I am eager to learn more about how your organization can benefit from my contribution.
+  I thank you for your time and consideration, and I look forward to hearing from you.
+  Regards,
+  ${dataObject.yourName}
+  #${dataObject.yourName} #jobs #careers
+  `;
+};
