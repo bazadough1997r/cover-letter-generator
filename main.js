@@ -52,20 +52,37 @@ var saveInputs = (
 // an example of using this function:
 // we are invoking the factory function inside a var value to save the returning object.
 var myInfo = saveInputs(
-    "Google",
-    "Junior Developer",
-    "Junior Full Stack Developer", ["Javascript", "HTML", "CSS"],
-    "Google",
+    "Carla Car Rental Inc",
+    "Internship",
+    "Junior Full Stack Developer", [
+        "Javascript",
+        "HTML",
+        "CSS",
+        "jQuery",
+        "NodeJs",
+        "Express Js",
+        "React Js",
+        "ANgular Js",
+        "SQL && noSQL Databases",
+    ],
+    "Carla Car Rental Inc",
     "I always wanted to know more about your technologies",
     "Full Stack Devloper Certificate",
     "Web Development", [
         "accepts feedback",
         "empathy",
-        "honest",
+        "honesty",
         "problem solver",
         "atonomous learner",
+        "Passion",
+        "Collaboration and teamwork",
+        "Proper communication skills",
+        "active listening",
+        "creativity",
     ],
-    "Programming", ["Achievements-one", "Achievements-two", "Achievements-three"],
+    "Programming", [
+        "Achieved 1 year in teaching full stack development in tunisia for building a better future",
+    ],
     "Seif Miehiar"
 );
 
