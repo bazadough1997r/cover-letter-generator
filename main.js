@@ -33,58 +33,91 @@ var saveInputs = (
     arrayOfAchievements,
     yourName
 ) => {
+    var companyName = companyName || document.getElementById("companyName").value;
+    var targetRole = targetRole || document.getElementById("targetRole").value;
+    var jobTitle = jobTitle || document.getElementById("jobTitle").value;
+    var hardSkills = hardSkills || document.getElementById("hardSkills").value;
+    var organizationName =
+        organizationName || document.getElementById("organizationName").value;
+    var arrayOfReasons =
+        arrayOfReasons || document.getElementById("arrayOfReasons").value;
+    var degree = degree || document.getElementById("degree").value;
+    var requirements =
+        requirements || document.getElementById("requirements").value;
+    var arrayOfSoftSkills =
+        arrayOfSoftSkills || document.getElementById("arrayOfSoftSkills").value;
+    var systems = systems || document.getElementById("systems").value;
+    var arrayOfAchievements =
+        arrayOfAchievements || document.getElementById("arrayOfAchievements").value;
+    var yourName = yourName || document.getElementById("yourName").value;
+    console.log({
+        companyName: companyName || document.getElementById("companyName").value,
+        targetRole: targetRole || document.getElementById("targetRole").value,
+        jobTitle: jobTitle || document.getElementById("jobTitle").value,
+        hardSkills: hardSkills || document.getElementById("hardSkills").value,
+        organizationName: organizationName || document.getElementById("organizationName").value,
+        arrayOfReasons: arrayOfReasons || document.getElementById("arrayOfReasons").value,
+        degree: degree || document.getElementById("degree").value,
+        requirements: requirements || document.getElementById("requirements").value,
+        arrayOfSoftSkills: arrayOfSoftSkills || document.getElementById("arrayOfSoftSkills").value,
+        systems: systems || document.getElementById("systems").value,
+        arrayOfAchievements: arrayOfAchievements ||
+            document.getElementById("arrayOfAchievements").value,
+        yourName: yourName || document.getElementById("yourName").value,
+    });
     return {
-        companyName: companyName,
-        targetRole: targetRole,
-        jobTitle: jobTitle,
-        hardSkills: hardSkills,
-        organizationName: organizationName,
-        arrayOfReasons: arrayOfReasons,
-        degree: degree,
-        requirements: requirements,
-        arrayOfSoftSkills: arrayOfSoftSkills,
-        systems: systems,
-        arrayOfAchievements: arrayOfAchievements,
-        yourName: yourName,
+        companyName: companyName || document.getElementById("companyName").value,
+        targetRole: targetRole || document.getElementById("targetRole").value,
+        jobTitle: jobTitle || document.getElementById("jobTitle").value,
+        hardSkills: hardSkills || document.getElementById("hardSkills").value,
+        organizationName: organizationName || document.getElementById("organizationName").value,
+        arrayOfReasons: arrayOfReasons || document.getElementById("arrayOfReasons").value,
+        degree: degree || document.getElementById("degree").value,
+        requirements: requirements || document.getElementById("requirements").value,
+        arrayOfSoftSkills: arrayOfSoftSkills || document.getElementById("arrayOfSoftSkills").value,
+        systems: systems || document.getElementById("systems").value,
+        arrayOfAchievements: arrayOfAchievements ||
+            document.getElementById("arrayOfAchievements").value,
+        yourName: yourName || document.getElementById("yourName").value,
     };
 };
 
 // an example of using this function:
 // we are invoking the factory function inside a var value to save the returning object.
-var myInfo = saveInputs(
-    "Carla Car Rental Inc",
-    "Internship",
-    "Junior Full Stack Developer", [
-        "Javascript",
-        "HTML",
-        "CSS",
-        "jQuery",
-        "NodeJs",
-        "Express Js",
-        "React Js",
-        "ANgular Js",
-        "SQL && noSQL Databases",
-    ],
-    "Carla Car Rental Inc",
-    "I always wanted to know more about your technologies",
-    "Full Stack Devloper Certificate",
-    "Web Development", [
-        "accepts feedback",
-        "empathy",
-        "honesty",
-        "problem solver",
-        "atonomous learner",
-        "Passion",
-        "Collaboration and teamwork",
-        "Proper communication skills",
-        "active listening",
-        "creativity",
-    ],
-    "Programming", [
-        "Achieved 1 year in teaching full stack development in tunisia for building a better future",
-    ],
-    "Seif Miehiar"
-);
+// var myInfo = saveInputs(
+//     "Carla Car Rental Inc",
+//     "Internship",
+//     "Junior Full Stack Developer", [
+//         "Javascript",
+//         "HTML",
+//         "CSS",
+//         "jQuery",
+//         "NodeJs",
+//         "Express Js",
+//         "React Js",
+//         "ANgular Js",
+//         "SQL && noSQL Databases",
+//     ],
+//     "Carla Car Rental Inc",
+//     "I always wanted to know more about your technologies",
+//     "Full Stack Devloper Certificate",
+//     "Web Development", [
+//         "accepts feedback",
+//         "empathy",
+//         "honesty",
+//         "problem solver",
+//         "atonomous learner",
+//         "Passion",
+//         "Collaboration and teamwork",
+//         "Proper communication skills",
+//         "active listening",
+//         "creativity",
+//     ],
+//     "Programming", [
+//         "Achieved 1 year in teaching full stack development in tunisia for building a better future",
+//     ],
+//     "Seif Miehiar"
+// );
 
 // now we want to create a function that would check our object and to take the values of it and update our cover letter.
 
@@ -148,4 +181,28 @@ var editName = (name) => {
         });
     }
     return string;
+};
+
+//toggling elements in html
+
+// Show an element
+var show = function(elem) {
+    elem.style.display = "block";
+};
+
+// Hide an element
+var hide = function(elem) {
+    elem.style.display = "none";
+};
+
+// Toggle element visibility
+var toggle = function(elem) {
+    // If the element is visible, hide it
+    if (window.getComputedStyle(elem).display === "block") {
+        hide(elem);
+        return;
+    }
+
+    // Otherwise, show it
+    show(elem);
 };

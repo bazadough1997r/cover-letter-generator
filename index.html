@@ -3,10 +3,12 @@
 <title>Seif Miehiar Cover Letter Generator</title>
 
 <body>
-    <h3>Welcome to Cover Letter Generator by Seif Miehiar</h3>
-    <br />
-    <form>
-        <pre>
+    <div>
+        <div id="form-div" style="display: block;">
+            <h3>Welcome to Cover Letter Generator by Seif Miehiar</h3>
+            <br />
+            <form onsubmit="saveInputs();return false">
+                <pre>
     <label for="companyName">Company Name</label>
     <input type="text" id="companyName" name="companyName" required />
 
@@ -47,10 +49,22 @@
     <!-- <input type = "button"
     value = "click me"
     onclick = "updateCoverLetter()"/> -->
-
+<!-- <form onsubmit="myFunction()">
+  Enter name: <input type="text">
+  <input type="submit">
+</form>
+ -->
 
 </pre>
-    </form>
+            </form>
+        </div>
+        <div id="result-div" style="display: none;">
+            <h3>
+                here is your cover letter waiting for you!
+            </h3>
+            <div></div>
+        </div>
+    </div>
 </body>
 <script type="text/javascript" src="./main.js"></script>
 <script src="jquery-3.5.1.min.js"></script>
