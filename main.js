@@ -65,6 +65,21 @@ var saveInputs = (
             document.getElementById("arrayOfAchievements").value,
         yourName: yourName || document.getElementById("yourName").value,
     });
+    newData = {
+        companyName: companyName || document.getElementById("companyName").value,
+        targetRole: targetRole || document.getElementById("targetRole").value,
+        jobTitle: jobTitle || document.getElementById("jobTitle").value,
+        hardSkills: hardSkills || document.getElementById("hardSkills").value,
+        organizationName: organizationName || document.getElementById("organizationName").value,
+        arrayOfReasons: arrayOfReasons || document.getElementById("arrayOfReasons").value,
+        degree: degree || document.getElementById("degree").value,
+        requirements: requirements || document.getElementById("requirements").value,
+        arrayOfSoftSkills: arrayOfSoftSkills || document.getElementById("arrayOfSoftSkills").value,
+        systems: systems || document.getElementById("systems").value,
+        arrayOfAchievements: arrayOfAchievements ||
+            document.getElementById("arrayOfAchievements").value,
+        yourName: yourName || document.getElementById("yourName").value,
+    };
     return {
         companyName: companyName || document.getElementById("companyName").value,
         targetRole: targetRole || document.getElementById("targetRole").value,
@@ -137,19 +152,23 @@ var saveInputs = (
 // #${yourName} #jobs #careers
 // `;
 
+//saving new data as a string to call on the html
+var newData = "";
 //function accepts two parameters. object of our data, and the cover letter to update it's values.
 var updateCoverLetter = (dataObject) => {
-    return `Dear ${dataObject.companyName},
+    return (newData =
+        newData +
+        `Dear ${dataObject.companyName},
   I am writing in regard to your job opening of ${
     dataObject.targetRole
   }. As a candidate with extensive experience in ${
-    dataObject.jobTitle
-  }, I am highly skilled in ${dataObject.hardSkills}.
+      dataObject.jobTitle
+    }, I am highly skilled in ${dataObject.hardSkills}.
   The opportunity to join ${
     dataObject.organizationName
   } greatly interests me because ${dataObject.arrayOfReasons}. As a holder of ${
-    dataObject.degree
-  } I can competently execute ${dataObject.requirements}.
+      dataObject.degree
+    } I can competently execute ${dataObject.requirements}.
   I believe that I would make a valuable asset to your team and I offer my resume for your review.
   As per my professional summary, my qualities and experience make me highly suitable for the role of ${
     dataObject.targetRole
@@ -167,7 +186,7 @@ var updateCoverLetter = (dataObject) => {
   Regards,
   ${dataObject.yourName}
   #${editName(dataObject.yourName)} #jobs #careers
-  `;
+  `);
 };
 //this functions takes a name as a string and return the first letter of each part of the name example: editName("Seif Miehiar") => // SM
 var editName = (name) => {
@@ -184,18 +203,14 @@ var editName = (name) => {
 };
 
 //toggling elements in html
-
-// Show an element
 var show = function(elem) {
     elem.style.display = "block";
 };
 
-// Hide an element
 var hide = function(elem) {
     elem.style.display = "none";
 };
 
-// Toggle element visibility
 var toggle = function(elem) {
     // If the element is visible, hide it
     if (window.getComputedStyle(elem).display === "block") {
@@ -206,3 +221,23 @@ var toggle = function(elem) {
     // Otherwise, show it
     show(elem);
 };
+
+// Listen for click events
+document.addEventListener(
+    "click",
+    function(event) {
+        // Make sure clicked element is our toggle
+        if (!event.target.classList.contains("toggle")) return;
+
+        // Prevent default link behavior
+        event.preventDefault();
+
+        // Get the content
+        var content = document.querySelector(event.target.hash);
+        if (!content) return;
+
+        // Toggle the content
+        toggle(content);
+    },
+    false
+);

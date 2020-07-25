@@ -45,6 +45,8 @@
     <label for="yourName">Your Name</label>
     <input type="text" id="yourName" name="yourName" required />
     <input type="submit" >
+    <a class="toggle" href="#example">Toggle Div</a>
+
     <!-- <button type="button" onclick="alert('Hello World!')">Click Me!</button> -->
     <!-- <input type = "button"
     value = "click me"
@@ -58,10 +60,16 @@
 </pre>
             </form>
         </div>
-        <div id="result-div" style="display: none;">
+        <div class="toggle-content" id="example">
             <h3>
                 here is your cover letter waiting for you!
             </h3>
+            <br />
+            <h2 class="cover-letter">
+                <script>
+                    document.getElementsByClassName("cover-letter").innerHTML = newData;
+                </script>
+            </h2>
             <div></div>
         </div>
     </div>
