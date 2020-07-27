@@ -7,7 +7,7 @@
         <div id="form-div" style="display: block;">
             <h3>Welcome to Cover Letter Generator by Seif Miehiar</h3>
             <br />
-            <form onsubmit="saveInputs();return false">
+            <form id="data-form" onsubmit="updateCoverLetter(saveInputs());return false">
                 <pre>
     <label for="companyName">Company Name</label>
     <input type="text" id="companyName" name="companyName" required />
@@ -67,14 +67,24 @@
             <br />
             <h2 class="cover-letter">
                 <script>
-                    document.getElementsByClassName("cover-letter").innerHTML = newData;
+                    y()
                 </script>
-            </h2>
-            <div></div>
+                <div></div>
         </div>
     </div>
 </body>
-<script type="text/javascript" src="./main.js"></script>
+<script>
+    function y() {
+        if (data !== undefined) {
+            console.log(this)
+            $('.cover-letter').append(data)
+        }
+    }
+</script>
+
+
+<script type="text/javascript" charset="UTF-8" src="./main.js"></script>
 <script src="jquery-3.5.1.min.js"></script>
+
 
 </html>

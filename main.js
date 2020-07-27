@@ -153,22 +153,82 @@ var saveInputs = (
 // `;
 
 //saving new data as a string to call on the html
-var newData = "";
+var data;
 //function accepts two parameters. object of our data, and the cover letter to update it's values.
 var updateCoverLetter = (dataObject) => {
-    return (newData =
-        newData +
-        `Dear ${dataObject.companyName},
+    data = `Dear ${dataObject.companyName},
+    I am writing in regard to your job opening of ${
+      dataObject.targetRole
+    }. As a candidate with extensive experience in ${
+    dataObject.jobTitle
+  }, I am highly skilled in ${dataObject.hardSkills}.
+    The opportunity to join ${
+      dataObject.organizationName
+    } greatly interests me because ${
+    dataObject.arrayOfReasons
+  }. As a holder of ${dataObject.degree} I can competently execute ${
+    dataObject.requirements
+  }.
+    I believe that I would make a valuable asset to your team and I offer my resume for your review.
+    As per my professional summary, my qualities and experience make me highly suitable for the role of ${
+      dataObject.targetRole
+    }.
+    I am highly regarded for ${
+      dataObject.arrayOfSoftSkills
+    }. I am proficient in ${dataObject.systems}.
+    Throughout my career, I have demonstrated the highest levels of service and commitment to the mission of any organization I have worked for.  ${
+      dataObject.arrayOfAchievements
+    }.
+    Thus, if you are looking for a well grounded ${
+      dataObject.jobTitle
+    } please contact me to arrange an interview. I am eager to learn more about how your organization can benefit from my contribution.
+    I thank you for your time and consideration, and I look forward to hearing from you.
+    Regards,
+    ${dataObject.yourName}
+    #${editName(dataObject.yourName)} #jobs #careers
+    `;
+    console.log(`Dear ${dataObject.companyName},
+    I am writing in regard to your job opening of ${
+      dataObject.targetRole
+    }. As a candidate with extensive experience in ${
+    dataObject.jobTitle
+  }, I am highly skilled in ${dataObject.hardSkills}.
+    The opportunity to join ${
+      dataObject.organizationName
+    } greatly interests me because ${
+    dataObject.arrayOfReasons
+  }. As a holder of ${dataObject.degree} I can competently execute ${
+    dataObject.requirements
+  }.
+    I believe that I would make a valuable asset to your team and I offer my resume for your review.
+    As per my professional summary, my qualities and experience make me highly suitable for the role of ${
+      dataObject.targetRole
+    }.
+    I am highly regarded for ${
+      dataObject.arrayOfSoftSkills
+    }. I am proficient in ${dataObject.systems}.
+    Throughout my career, I have demonstrated the highest levels of service and commitment to the mission of any organization I have worked for.  ${
+      dataObject.arrayOfAchievements
+    }.
+    Thus, if you are looking for a well grounded ${
+      dataObject.jobTitle
+    } please contact me to arrange an interview. I am eager to learn more about how your organization can benefit from my contribution.
+    I thank you for your time and consideration, and I look forward to hearing from you.
+    Regards,
+    ${dataObject.yourName}
+    #${editName(dataObject.yourName)} #jobs #careers
+    `);
+    return `Dear ${dataObject.companyName},
   I am writing in regard to your job opening of ${
     dataObject.targetRole
   }. As a candidate with extensive experience in ${
-      dataObject.jobTitle
-    }, I am highly skilled in ${dataObject.hardSkills}.
+    dataObject.jobTitle
+  }, I am highly skilled in ${dataObject.hardSkills}.
   The opportunity to join ${
     dataObject.organizationName
   } greatly interests me because ${dataObject.arrayOfReasons}. As a holder of ${
-      dataObject.degree
-    } I can competently execute ${dataObject.requirements}.
+    dataObject.degree
+  } I can competently execute ${dataObject.requirements}.
   I believe that I would make a valuable asset to your team and I offer my resume for your review.
   As per my professional summary, my qualities and experience make me highly suitable for the role of ${
     dataObject.targetRole
@@ -186,7 +246,7 @@ var updateCoverLetter = (dataObject) => {
   Regards,
   ${dataObject.yourName}
   #${editName(dataObject.yourName)} #jobs #careers
-  `);
+  `;
 };
 //this functions takes a name as a string and return the first letter of each part of the name example: editName("Seif Miehiar") => // SM
 var editName = (name) => {
