@@ -1,51 +1,107 @@
 <!DOCTYPE html>
 <html>
-<title>Seif Miehiar Cover Letter Generator</title>
+<title>Cover Letter Generator</title>
+
+
+<style>
+    * {
+      margin: auto;
+      padding: 0;
+      font-family: 'Lato', sans-serif;
+    }
+    body {
+      text-align: center;
+      font-family: 'Lato', sans-serif;
+      background-color: #141414 ;
+      color: #ffffff ;
+    }
+    .form-inline {
+      margin-top: 100px;
+      align-items: center;
+      text-align: center;
+      vertical-align: middle;
+    }
+    .form-inline input {
+      vertical-align: middle;
+      margin: 5px 10px 5px 0;
+      padding: 8px;
+      background-color: white;
+      border: 1px solid white;
+    }
+    input[type=text], select, textarea {
+      width: 50%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-left: 80px;
+      margin-right: 80px;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical
+    }
+    #btn {
+      background-color: #e50914;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    #btn:hover {
+      background-color: #ffffff;
+      color: #e50914;
+      border-color: black;
+    }
+    </style>
 
 <body>
     <div>
         <div id="form-div" style="display: block;">
+            <br>
             <h3>Welcome to Cover Letter Generator by Seif Miehiar</h3>
             <br />
             <form id="data-form" onsubmit="updateCoverLetter(saveInputs());return false">
-                <pre>
-    <label for="companyName">Company Name</label>
-    <input type="text" id="companyName" name="companyName" required />
+                <div>
+                    <br>
+    <label for="companyName">Recruiter/HR name</label><br>
+    <input type="text" id="companyName" name="companyName" required /> <br>
 
-    <label for="targetRole">Target Role</label>
-    <input type="text" id="targetRole" name="targetRole" required />
+    <label for="targetRole">Expected role</label><br>
+    <input type="text" id="targetRole" name="targetRole" required /><br>
 
-    <label for="jobTitle">Job Title</label>
-    <input type="text" id="jobTitle" name="jobTitle" required />
+    <label for="jobTitle">Position</label><br>
+    <input type="text" id="jobTitle" name="jobTitle" required /><br>
 
-    <label for="hardSkills">Hard Skills</label>
-    <input type="text" id="hardSkills" name="hardSkills" required />
+    <label for="hardSkills">Hard skills;</label><br>
+    <label for="hardSkills">ex: Technical Skills, Computer Skills, Analytical Skills, Marketing Skills, </label><br>
+    <label for="hardSkills">Presentation Skills, Management Skills, Project Management Skills, etc...</label><br>
+    <input type="text" id="hardSkills" name="hardSkills" required /><br>
 
-    <label for="organizationName">Organization Name</label>
-    <input type="text" id="organizationName" name="organizationName" required />
+    <label for="organizationName">Organization/company name</label><br>
+    <input type="text" id="organizationName" name="organizationName" required /><br>
 
-    <label for="arrayOfReasons">Reasons </label>
-    <input type="text" id="arrayOfReasons" name="arrayOfReasons" required />
+    <label for="arrayOfReasons">Reasons (why are you interested to join this company?) </label><br>
+    <input type="text" id="arrayOfReasons" name="arrayOfReasons" required /><br>
 
-    <label for="degree">Degree</label>
-    <input type="text" id="degree" name="degree" required />
+    <label for="degree">Your degree</label><br>
+    <input type="text" id="degree" name="degree" required /><br>
 
-    <label for="requirements">Requested Requirements </label>
-    <input type="text" id="requirements" name="requirements" required />
+    <label for="requirements">Requested requirements that you can execute (Responsibilities) </label><br>
+    <input type="text" id="requirements" name="requirements" required /><br>
 
-    <label for="arrayOfSoftSkills">Soft Skills</label>
-    <input type="text" id="arrayOfSoftSkills" name="arrayOfSoftSkills" required />
+    <label for="arrayOfSoftSkills">Soft skills</label><br>
+    <input type="text" id="arrayOfSoftSkills" name="arrayOfSoftSkills" required /><br>
 
-    <label for="systems">Systems</label>
-    <input type="text" id="systems" name="systems" required />
+    <label for="systems">Technologies</label><br>
+    <input type="text" id="systems" name="systems" required /><br>
 
-    <label for="arrayOfAchievements">Achievements</label>
-    <input type="text" id="arrayOfAchievements" name="arrayOfAchievements" required />
+    <label for="arrayOfAchievements">Your achievements during your previous workplaces</label><br>
+    <input type="text" id="arrayOfAchievements" name="arrayOfAchievements" required /><br>
 
-    <label for="yourName">Your Name</label>
-    <input type="text" id="yourName" name="yourName" required />
-    <input type="submit" >
-    <a class="toggle" href="#example">Toggle Div</a>
+    <label for="yourName">Your name/signature</label><br>
+    <input type="text" id="yourName" name="yourName" required /><br>
+    <input type="submit" id="btn">
+    <a class="toggle" href="#toggleCoverLetter" id="btn" style="text-decoration: none;">CoverLetter toggle</a>
 
     <!-- <button type="button" onclick="alert('Hello World!')">Click Me!</button> -->
     <!-- <input type = "button"
@@ -57,10 +113,11 @@
 </form>
  -->
 
-</pre>
+</div>
             </form>
         </div>
-        <div class="toggle-content" id="example">
+        <br>
+        <div class="toggle-content" id="toggleCoverLetter">
             <h3>
                 here is your cover letter waiting for you!
             </h3>
