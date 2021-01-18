@@ -200,6 +200,7 @@ var updateCoverLetter = (dataObject) => {
     #${editName(dataObject.yourName)} #jobs #careers
     `;
 ///////////////////
+var toggleCoverLetter 
   //   var COVERLETTER = (`Dear ${dataObject.companyName},
   //   I am writing in regard to your job opening of ${
   //     dataObject.targetRole
