@@ -1,4 +1,4 @@
-// welcome to JavaScript file where the functions will be declared and used/invoked on index.html
+// welcome to JavaScript file where the functions will be declared and used/invoked on home.html
 
 // let's create a function that will take our input and save it in variables. Using ES6 syntax.
 
