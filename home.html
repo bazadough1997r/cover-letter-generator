@@ -85,6 +85,10 @@
     <label for="companyName">Recruiter/HR name</label><br>
     <input type="text" id="companyName" name="companyName" autocomplete="off" required /> <br>
 
+    <div id="toggleInnerHtml">
+
+    </div>
+
     <label for="targetRole">Expected role</label><br>
     <input type="text" id="targetRole" name="targetRole" autocomplete="off" required /><br>
 
@@ -96,9 +100,7 @@
     <label for="hardSkills">Presentation Skills, Management Skills, Project Management Skills, etc...</label><br>
     <input type="text" id="hardSkills" name="hardSkills" autocomplete="off" required /><br>
 
-    <div id="toggleInnerHtml">
 
-    </div>
 
     <label for="organizationName">Organization/company name</label><br>
     <input type="text" id="organizationName" name="organizationName" autocomplete="off" required /><br>
@@ -125,7 +127,7 @@
     <input type="text" id="yourName" name="yourName" autocomplete="off" required /><br>
     <input type="Submit" id="btn" style="font-size: medium;" onclick="alert('Press SHOW button if you want to see yor cover letter!');">
     <!-- <a type="submit" style="text-decoration: none;" id="btn">Submit</a> -->
-    <a id="btn" class="toggle" href="#toggleCoverLetter" style="text-decoration: none; font-size: medium;">Show</a>
+    <a id="btn" class="toggle" href="#toggleCoverLetter" style="text-decoration: none; font-size: medium;" onclick="window.scrollTo(0,0);">Show</a>
     <button id="btn" style="text-decoration: none; font-size: medium;" onclick="location.reload(); window.scrollTo(0,0);">Reset</button>
 
     <!-- <button type="button" onclick="alert('Hello World!')">Click Me!</button> -->
