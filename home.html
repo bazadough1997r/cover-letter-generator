@@ -123,9 +123,10 @@
 
     <label for="yourName">Your name/signature</label><br>
     <input type="text" id="yourName" name="yourName" autocomplete="off" required /><br>
-    <input type="Submit" id="btn" style="font-size: medium;">
+    <input type="Submit" id="btn" style="font-size: medium;" onclick="alert('Press SHOW button if you want to see yor cover letter!');">
     <!-- <a type="submit" style="text-decoration: none;" id="btn">Submit</a> -->
-    <a class="toggle" href="#toggleCoverLetter" style="text-decoration: none; font-size: medium;" id="btn">Show</a>
+    <a id="btn" class="toggle" href="#toggleCoverLetter" style="text-decoration: none; font-size: medium;">Show</a>
+    <button id="btn" style="text-decoration: none; font-size: medium;" onclick="location.reload(); window.scrollTo(0,0);">Reset</button>
 
     <!-- <button type="button" onclick="alert('Hello World!')">Click Me!</button> -->
     <!-- <input type = "button"
