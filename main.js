@@ -315,7 +315,11 @@ var upperName = (name) => {
 	for (var i = 0; i < splitName.length; i++) {
 		splitName[i][0] = splitName[i][0].toUpperCase();
 		console.log(splitName[i][0]);
-		newName = newName + splitName[i] + " ";
+		if (i < splitName.length - 1) {
+			newName = newName + splitName[i] + " ";
+		} else {
+			newName = newName + splitName[i];
+		}
 	}
 	return newName;
 };
