@@ -168,12 +168,12 @@ var saveInputs = (
 var data;
 //function accepts two parameters. object of our data, and the cover letter to update it's values.
 var updateCoverLetter = (dataObject) => {
-	data = `Dear ${dataObject.companyName},
+	data = `Dear ${dataObject.companyName},\n
     I am writing in regard to your job opening of ${
 			dataObject.targetRole
 		}. As a candidate with extensive experience in ${
 		dataObject.jobTitle
-	}, I am highly skilled in ${dataObject.hardSkills}.
+	}, I am highly skilled in ${dataObject.hardSkills}.\n
     The opportunity to join ${
 			dataObject.organizationName
 		} greatly interests me because ${
@@ -181,13 +181,13 @@ var updateCoverLetter = (dataObject) => {
 	}. As a holder of ${dataObject.degree} I can competently execute ${
 		dataObject.requirements
 	}.
-    I believe that I would make a valuable asset to your team and I offer my resume for your review.
+    I believe that I would make a valuable asset to your team and I offer my resume for your review.\n
     As per my professional summary, my qualities and experience make me highly suitable for the role of ${
 			dataObject.targetRole
 		}.
     I am highly regarded for ${
 			dataObject.arrayOfSoftSkills
-		}. I am proficient in ${dataObject.systems}.
+		}. I am proficient in ${dataObject.systems}.\n
     Throughout my career, I have demonstrated the highest levels of service and commitment to the mission of any organization I have worked for.  ${
 			dataObject.arrayOfAchievements
 		}.
@@ -291,7 +291,7 @@ var updateCoverLetter = (dataObject) => {
 	} please contact me to arrange an interview. I am eager to learn more about how your organization can benefit from my contribution.
   I thank you for your time and consideration, and I look forward to hearing from you.
   Regards,
-  ${dataObject.yourName}
+  ${upperName(dataObject.yourName)}
   #${editName(dataObject.yourName)} #jobs #careers
   `;
 };
@@ -303,10 +303,21 @@ var editName = (name) => {
 		var string = "";
 		result.map((element, i) => {
 			console.log(element, i);
-			string += element[0];
+			string += element[0].toUpperCase();
 		});
 	}
 	return string;
+};
+
+var upperName = (name) => {
+	var newName = "";
+	var splitName = name.split(" ");
+	for (var i = 0; i < splitName.length; i++) {
+		splitName[i][0] = splitName[i][0].toUpperCase();
+		console.log(splitName[i][0]);
+		newName = newName + splitName[i] + " ";
+	}
+	return newName;
 };
 
 //toggling elements in html
