@@ -309,21 +309,36 @@ var editName = (name) => {
 	return string;
 };
 
+// var upperName = (name) => {
+// 	var newName = "";
+// 	var splitName = name.split(" ");
+// 	for (var i = 0; i < splitName.length; i++) {
+// 		splitName[i][0] = String.prototype.toUpperCase.call(splitName[i][0]);
+// 		console.log(String.prototype.toUpperCase.call(splitName[i][0]));
+// 		if (i < splitName.length - 1) {
+// 			newName = newName + splitName[i] + " ";
+// 		} else {
+// 			newName = newName + splitName[i];
+// 		}
+// 	}
+// 	return newName;
+// };
+
 var upperName = (name) => {
 	var newName = "";
 	var splitName = name.split(" ");
 	for (var i = 0; i < splitName.length; i++) {
-		splitName[i][0] = splitName[i][0].toUpperCase();
-		console.log(splitName[i][0]);
+		var firstName = splitName[i][0].toUpperCase();
+		splitName[i][0] = firstName;
 		if (i < splitName.length - 1) {
-			newName = newName + splitName[i] + " ";
+			newName =
+				newName + splitName[i].replace(splitName[i][0], firstName) + " ";
 		} else {
-			newName = newName + splitName[i];
+			newName = newName + splitName[i].replace(splitName[i][0], firstName);
 		}
 	}
 	return newName;
 };
-
 //toggling elements in html
 var show = function (elem) {
 	elem.style.display = "block";
