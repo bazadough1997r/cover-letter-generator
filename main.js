@@ -166,9 +166,10 @@ var saveInputs = (
 
 //saving new data as a string to call on the html
 var data;
+var newLine = document.write("<br>");
 //function accepts two parameters. object of our data, and the cover letter to update it's values.
 var updateCoverLetter = (dataObject) => {
-	data = `Dear ${dataObject.companyName},\n
+	data = `Dear ${dataObject.companyName},${newLine}
     I am writing in regard to your job opening of ${
 			dataObject.targetRole
 		}. As a candidate with extensive experience in ${
