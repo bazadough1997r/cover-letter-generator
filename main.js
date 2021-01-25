@@ -325,19 +325,24 @@ var editName = (name) => {
 // };
 
 var upperName = (name) => {
-	var newName = "";
-	var splitName = name.split(" ");
-	for (var i = 0; i < splitName.length; i++) {
-		var firstName = splitName[i][0].toUpperCase();
-		splitName[i][0] = firstName;
-		if (i < splitName.length - 1) {
-			newName =
-				newName + splitName[i].replace(splitName[i][0], firstName) + " ";
-		} else {
-			newName = newName + splitName[i].replace(splitName[i][0], firstName);
-		}
+	var updatedName = "";
+	// ["seif". "miehiar"]
+	var splittedName = name.split(" ");
+	// console.log(splittedName[0].split(""));
+	var arrayName = [];
+
+	for (var i = 0; i < splittedName.length; i++) {
+		var arr = splittedName[i].split("");
+		//["s", "e", "i", "f"]
+		var str = splittedName[i][0].toUpperCase();
+		//"S"
+		arr[0] = str;
+		// ["S", "e", "i", "f"]
+		arrayName.push(arr.join(""));
+		arr = [];
 	}
-	return newName;
+	updatedName = arrayName.join(" ");
+	return updatedName;
 };
 //toggling elements in html
 var show = function (elem) {
